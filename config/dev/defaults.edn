@@ -1,0 +1,4 @@
+{:cache [:cache/directory "courier-cache"]
+ :datomic/uri "datomic:dev://localhost:4334/kodekamp"
+ :jetty/port 6660
+ :request-log-dir "log"}

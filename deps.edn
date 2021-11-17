@@ -1,0 +1,38 @@
+{:paths ["src" "resources"]
+ :mvn/repos {"my.datomic.com" {:url "https://my.datomic.com/repo"}}
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        org.clojure/core.match {:mvn/version "1.0.0"}
+        buddy/buddy-core {:mvn/version "1.10.1"}
+        buddy/buddy-sign {:mvn/version "3.4.1"}
+        cheshire/cheshire {:mvn/version "5.10.0"}
+        com.datomic/datomic-pro {:mvn/version "1.0.6344"}
+        com.fzakaria/slf4j-timbre {:mvn/version "0.3.21"}
+        com.magnars/confair {:mvn/version "2021-03-16"}
+        com.taoensso/timbre {:mvn/version "5.1.2"}
+        cjohansen/courier {:mvn/version "2021.09.17"}
+        compojure/compojure {:mvn/version "1.6.2"}
+        datomic-type-extensions/datomic-type-extensions {:mvn/version "2019-09-04"}
+        datoms-differ/datoms-differ {:mvn/version "2020-08-09"}
+        fogus/ring-edn {:mvn/version "0.3.0"}
+        integrant/integrant {:mvn/version "0.8.0"}
+        java-time-literals/java-time-literals {:mvn/version "2018-04-06"}
+        realize/realize {:mvn/version "2019-04-24"}
+        ring/ring {:mvn/version "1.9.2"}
+        ring/ring-json {:mvn/version "0.5.0"
+                        :exclusions [cheshire/cheshire]}
+        org.slf4j/log4j-over-slf4j {:mvn/version "1.7.32"}
+        org.slf4j/jul-to-slf4j {:mvn/version "1.7.32"}
+        org.slf4j/jcl-over-slf4j {:mvn/version "1.7.32"}}
+
+ :aliases {:dev {:extra-paths ["dev" "test"]
+                 :extra-deps {org.clojure/tools.namespace {:mvn/version "0.3.0-alpha4"}
+                              cjohansen/parrot {:mvn/version "2021.05.10"}
+                              integrant/repl {:mvn/version "0.3.2"}
+                              nrepl/nrepl {:mvn/version "0.8.3"}
+                              vvvvalvalval/scope-capture {:mvn/version "0.3.2"}}}
+           :test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.0.700"}
+                               lambdaisland/kaocha-cloverage {:mvn/version "1.0.63"}
+                               kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}}}
+
+           :ancient {:extra-deps {olical/depot {:mvn/version "1.8.4"}}
+                     :main-opts ["-m" "depot.outdated.main"]}}}
